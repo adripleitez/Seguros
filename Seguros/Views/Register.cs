@@ -1,5 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
+using Seguros.Controllers;
+using Seguros.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,7 +51,24 @@ namespace Seguros
 
         private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if(String.IsNullOrEmpty(txtfieldUser.Text.ToString()) || String.IsNullOrEmpty(txtfieldPassw.Text.ToString()) 
+                    || String.IsNullOrEmpty(txtfieldName.Text.ToString()))
+                {
+                    MessageBox.Show("No puede dejar ningun campo vacío");
+                }
+                else
+                {
+                    User newUser = new User(txtfieldUser.Text.ToString(), txtfieldPassw.Text.ToString(), txtfieldName.Text.ToString());
+                    UserController.RegisterUser(newUser);
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Register_Load(object sender, EventArgs e)
