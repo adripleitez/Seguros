@@ -1,13 +1,8 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
+using Seguros.Views;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Seguros
@@ -15,6 +10,7 @@ namespace Seguros
     public partial class login : MaterialForm
 
     {
+        Thread th;
         public login()
         {
             InitializeComponent();
@@ -23,11 +19,12 @@ namespace Seguros
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
-            materialSkinManager.ColorScheme = new ColorScheme(
+            /* materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.Cyan600, Primary.Cyan500,
                 Primary.Cyan500, Accent.LightBlue700,
                 TextShade.WHITE
             );
+            */
 
         }
 
@@ -48,10 +45,33 @@ namespace Seguros
 
         private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
-            using (Register frmRegister = new Register())
-            {
-                frmRegister.ShowDialog();
-            }
+            Close();
+            th = new Thread(OpenFormRegister);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void OpenFormRegister(object obj)
+        {
+            Application.Run(new Register());
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Close();
+            th = new Thread(OpenFormPrincipal);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void OpenFormPrincipal(object obj)
+        {
+            Application.Run(new Principal());
         }
     }
 }

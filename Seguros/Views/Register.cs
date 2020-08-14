@@ -1,22 +1,16 @@
 ﻿using MaterialSkin;
-using MaterialSkin.Controls;
 using Seguros.Controllers;
 using Seguros.models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Seguros
 {
     public partial class Register : MaterialSkin.Controls.MaterialForm
 
     {
+        Thread th;
 
         public Register()
         {
@@ -25,13 +19,6 @@ namespace Seguros
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Blue400, Primary.Blue500,
-                Primary.Blue500, Accent.LightBlue200,
-                TextShade.WHITE
-            );
-
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
@@ -78,10 +65,15 @@ namespace Seguros
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            using (login frmLogin = new login())
-            {
-                frmLogin.ShowDialog();
-            }
+            Close();
+            th = new Thread(OpenFormLogin);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void OpenFormLogin(object obj)
+        {
+            Application.Run(new login());
         }
     }
 }
