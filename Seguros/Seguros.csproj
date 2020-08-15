@@ -73,11 +73,11 @@
     <Compile Include="Controllers\Connection.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="models\User.cs" />
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Views\NuevaPoliza.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\NuevaPoliza.Designer.cs">
+      <DependentUpon>NuevaPoliza.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Principal.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\NuevaPoliza.resx">
+      <DependentUpon>NuevaPoliza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

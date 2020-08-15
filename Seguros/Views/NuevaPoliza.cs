@@ -19,5 +19,10 @@ namespace Seguros.Views
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
