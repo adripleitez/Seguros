@@ -31,23 +31,24 @@
             this.lbl_bienvenido = new MaterialSkin.Controls.MaterialLabel();
             this.lbl_usuario = new MaterialSkin.Controls.MaterialLabel();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.ID_Usuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Usuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Fecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Hora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ID_Usuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // lbl_bienvenido
             // 
             this.lbl_bienvenido.AutoSize = true;
             this.lbl_bienvenido.Depth = 0;
-            this.lbl_bienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lbl_bienvenido.Font = new System.Drawing.Font("Roboto", 11F);
             this.lbl_bienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl_bienvenido.Location = new System.Drawing.Point(78, 123);
             this.lbl_bienvenido.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_bienvenido.Name = "lbl_bienvenido";
-            this.lbl_bienvenido.Size = new System.Drawing.Size(105, 24);
+            this.lbl_bienvenido.Size = new System.Drawing.Size(103, 24);
             this.lbl_bienvenido.TabIndex = 0;
             this.lbl_bienvenido.Text = "Bienvenido";
             // 
@@ -57,7 +58,7 @@
             this.lbl_usuario.Depth = 0;
             this.lbl_usuario.Font = new System.Drawing.Font("Roboto", 11F);
             this.lbl_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_usuario.Location = new System.Drawing.Point(195, 123);
+            this.lbl_usuario.Location = new System.Drawing.Point(244, 123);
             this.lbl_usuario.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_usuario.Name = "lbl_usuario";
             this.lbl_usuario.Size = new System.Drawing.Size(74, 24);
@@ -80,6 +81,11 @@
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // ID_Usuario
+            // 
+            this.ID_Usuario.Text = "ID_Usuario";
+            this.ID_Usuario.Width = 130;
             // 
             // Nombre
             // 
@@ -105,16 +111,25 @@
             this.Hora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Hora.Width = 130;
             // 
-            // ID_Usuario
+            // materialRaisedButton1
             // 
-            this.ID_Usuario.Text = "ID_Usuario";
-            this.ID_Usuario.Width = 130;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(545, 115);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(176, 43);
+            this.materialRaisedButton1.TabIndex = 3;
+            this.materialRaisedButton1.Text = "PruebaDataGrid";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 617);
+            this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.lbl_usuario);
             this.Controls.Add(this.lbl_bienvenido);
@@ -136,5 +151,6 @@
         private System.Windows.Forms.ColumnHeader Fecha;
         private System.Windows.Forms.ColumnHeader Hora;
         private System.Windows.Forms.ColumnHeader ID_Usuario;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
     }
 }

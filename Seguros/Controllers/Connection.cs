@@ -42,7 +42,6 @@ namespace Seguros.Controllers
                 MessageBox.Show("No se conecto la base de datos");
             }
 
-            
             return Ds.Tables[0];
         }
 
