@@ -56,5 +56,18 @@ namespace Seguros.Views
         {
             Application.Run(new PruebaDataGrid());
         }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            Close();
+            th = new Thread(OpenFormNuevoPais);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void OpenFormNuevoPais(object obj)
+        {
+            Application.Run(new NuevoPais());
+        }
     }
 }
