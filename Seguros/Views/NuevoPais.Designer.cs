@@ -37,7 +37,7 @@
             this.btnAgregar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.idPais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombrePais = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dataGridView1
             // 
@@ -73,11 +74,11 @@
             this.idPais,
             this.NombrePais,
             this.eliminar});
-            this.dataGridView1.Location = new System.Drawing.Point(91, 260);
+            this.dataGridView1.Location = new System.Drawing.Point(106, 252);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(584, 211);
+            this.dataGridView1.Size = new System.Drawing.Size(553, 211);
             this.dataGridView1.TabIndex = 2;
             // 
             // txtBoxPais
@@ -105,9 +106,9 @@
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.txtBoxPais);
             this.groupBox1.Controls.Add(this.lblPais);
-            this.groupBox1.Location = new System.Drawing.Point(91, 92);
+            this.groupBox1.Location = new System.Drawing.Point(71, 92);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(577, 100);
+            this.groupBox1.Size = new System.Drawing.Size(618, 100);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar nuevo país";
@@ -126,8 +127,8 @@
             // 
             // idPais
             // 
+            this.idPais.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.idPais.HeaderText = "ID País";
-            this.idPais.MinimumWidth = 6;
             this.idPais.Name = "idPais";
             this.idPais.Width = 125;
             // 
@@ -141,11 +142,12 @@
             // eliminar
             // 
             this.eliminar.HeaderText = "Eliminar";
-            this.eliminar.MinimumWidth = 6;
+            this.eliminar.Image = global::Seguros.Properties.Resources.eliminar;
+            this.eliminar.MinimumWidth = 3;
             this.eliminar.Name = "eliminar";
             this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.eliminar.Width = 125;
+            this.eliminar.Width = 80;
             // 
             // NuevoPais
             // 
@@ -177,6 +179,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPais;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombrePais;
-        private System.Windows.Forms.DataGridViewButtonColumn eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
     }
 }

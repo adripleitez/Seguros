@@ -11,22 +11,26 @@ using System.Windows.Forms;
 
 namespace Seguros.Views
 {
-    public partial class NuevoPais : MaterialSkin.Controls.MaterialForm
+    public partial class Aseguradora : MaterialSkin.Controls.MaterialForm
     {
-        public NuevoPais()
+        public Aseguradora()
         {
             InitializeComponent();
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
         }
 
-        private void NuevoPais_Load(object sender, EventArgs e)
+        private void Aseguradora_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e) => Close();
+        private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }
