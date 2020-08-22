@@ -1,6 +1,5 @@
 ﻿using MaterialSkin;
 using Seguros.Controllers;
-using Seguros.models;
 using System;
 using System.Windows.Forms;
 using System.Threading;
@@ -47,8 +46,7 @@ namespace Seguros
                 }
                 else
                 {
-                    User newUser = new User(txtfieldUser.Text.ToString(), txtfieldPassw.Text.ToString(), txtfieldName.Text.ToString());
-                    UserController.RegisterUser(newUser);
+                    UserController.registrarUsuario(txtfieldName.Text.ToString(), txtfieldPassw.Text.ToString(), txtfieldUser.Text.ToString());
                 }
                 
             }
