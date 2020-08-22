@@ -28,131 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtfield1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtfield2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.btnLogin = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnRegister = new MaterialSkin.Controls.MaterialRaisedButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnSeleccionar = new MaterialSkin.Controls.MaterialFlatButton();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
-            // materialLabel1
+            // splitContainer1
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.SystemColors.Window;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(129, 199);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(79, 24);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Usuario:";
-            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
+            this.splitContainer1.Location = new System.Drawing.Point(-2, 62);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // materialLabel2
+            // splitContainer1.Panel1
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.BackColor = System.Drawing.SystemColors.Window;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(129, 294);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(110, 24);
-            this.materialLabel2.TabIndex = 1;
-            this.materialLabel2.Text = "Contraseña:";
-            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
+            this.splitContainer1.Panel1.Controls.Add(this.btnSeleccionar);
             // 
-            // txtfield1
+            // splitContainer1.Panel2
             // 
-            this.txtfield1.BackColor = System.Drawing.SystemColors.Control;
-            this.txtfield1.Depth = 0;
-            this.txtfield1.Hint = "Ingresa tu usuario";
-            this.txtfield1.Location = new System.Drawing.Point(133, 241);
-            this.txtfield1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtfield1.Name = "txtfield1";
-            this.txtfield1.PasswordChar = '\0';
-            this.txtfield1.SelectedText = "";
-            this.txtfield1.SelectionLength = 0;
-            this.txtfield1.SelectionStart = 0;
-            this.txtfield1.Size = new System.Drawing.Size(525, 28);
-            this.txtfield1.TabIndex = 2;
-            this.txtfield1.UseSystemPasswordChar = false;
-            this.txtfield1.Click += new System.EventHandler(this.txtfield1_Click);
+            this.splitContainer1.Panel2.Controls.Add(this.axAcroPDF1);
+            this.splitContainer1.Size = new System.Drawing.Size(802, 610);
+            this.splitContainer1.SplitterDistance = 116;
+            this.splitContainer1.TabIndex = 0;
             // 
-            // txtfield2
+            // btnSeleccionar
             // 
-            this.txtfield2.BackColor = System.Drawing.SystemColors.Control;
-            this.txtfield2.Depth = 0;
-            this.txtfield2.Hint = "Ingresar contraseña";
-            this.txtfield2.Location = new System.Drawing.Point(133, 342);
-            this.txtfield2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtfield2.Name = "txtfield2";
-            this.txtfield2.PasswordChar = '*';
-            this.txtfield2.SelectedText = "";
-            this.txtfield2.SelectionLength = 0;
-            this.txtfield2.SelectionStart = 0;
-            this.txtfield2.Size = new System.Drawing.Size(525, 28);
-            this.txtfield2.TabIndex = 3;
-            this.txtfield2.UseSystemPasswordChar = false;
+            this.btnSeleccionar.AutoSize = true;
+            this.btnSeleccionar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSeleccionar.Depth = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Location = new System.Drawing.Point(314, 42);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSeleccionar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Primary = false;
+            this.btnSeleccionar.Size = new System.Drawing.Size(126, 36);
+            this.btnSeleccionar.TabIndex = 0;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // btnLogin
+            // axAcroPDF1
             // 
-            this.btnLogin.Depth = 0;
-            this.btnLogin.Location = new System.Drawing.Point(258, 443);
-            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Primary = true;
-            this.btnLogin.Size = new System.Drawing.Size(244, 46);
-            this.btnLogin.TabIndex = 6;
-            this.btnLogin.Text = "Iniciar Sesión";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Depth = 0;
-            this.btnRegister.Location = new System.Drawing.Point(258, 502);
-            this.btnRegister.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Primary = true;
-            this.btnRegister.Size = new System.Drawing.Size(244, 46);
-            this.btnRegister.TabIndex = 7;
-            this.btnRegister.Text = "Registrarse";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            this.axAcroPDF1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(0, 0);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(802, 490);
+            this.axAcroPDF1.TabIndex = 0;
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 671);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtfield2);
-            this.Controls.Add(this.txtfield1);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
             this.Load += new System.EventHandler(this.login_Load);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtfield1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtfield2;
-        private MaterialSkin.Controls.MaterialRaisedButton btnLogin;
-        private MaterialSkin.Controls.MaterialRaisedButton btnRegister;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private MaterialSkin.Controls.MaterialFlatButton btnSeleccionar;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }
 

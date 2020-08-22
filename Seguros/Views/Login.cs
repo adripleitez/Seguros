@@ -1,6 +1,5 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
-using Seguros.Views;
 using System;
 using System.Threading;
 using System.Windows.Forms;
@@ -28,22 +27,7 @@ namespace Seguros
 
         }
 
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtfield1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        /*private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
             Close();
             th = new Thread(OpenFormRegister);
@@ -54,24 +38,26 @@ namespace Seguros
         private void OpenFormRegister(object obj)
         {
             Application.Run(new Register());
-        }
+        }*/
 
         private void login_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            Close();
-            th = new Thread(OpenFormMenuPrincipal);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
-        }
 
-        private void OpenFormMenuPrincipal(object obj)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            Application.Run(new MenuPrincipal());
+            OpenFileDialog fd = new OpenFileDialog();
+
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                axAcroPDF1.src = fd.FileName;
+            }
+            else
+            {
+                MessageBox.Show("seleccionar archivo");
+            }
         }
     }
 }
