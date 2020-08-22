@@ -1,6 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
+using Spire.PdfViewer;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -52,7 +53,7 @@ namespace Seguros
 
             if (fd.ShowDialog() == DialogResult.OK)
             {
-                axAcroPDF1.src = fd.FileName;
+                pdfDocumentViewer1.LoadFromFile(fd.FileName);
             }
             else
             {
