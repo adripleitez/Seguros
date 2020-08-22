@@ -64,14 +64,14 @@ namespace Seguros
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Close();
-            th = new Thread(OpenFormPrincipal);
+            th = new Thread(OpenFormMenuPrincipal);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
         }
 
-        private void OpenFormPrincipal(object obj)
+        private void OpenFormMenuPrincipal(object obj)
         {
-            Application.Run(new Principal());
+            Application.Run(new MenuPrincipal());
         }
     }
 }

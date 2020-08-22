@@ -27,10 +27,5 @@ namespace Seguros.Views
 
         }
 
-        private void materialTabSelector1_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
