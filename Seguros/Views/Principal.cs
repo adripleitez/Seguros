@@ -1,6 +1,5 @@
 ﻿using MaterialSkin;
 using Seguros.Controllers;
-using Seguros.models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -23,25 +22,7 @@ namespace Seguros.Views
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            List<User> UserList = (from DataRow dr in UserController.GetUserHistorial().Rows
-                                   select new User()
-                                   {
-
-                                       Id_usuario = Convert.ToInt32(dr["id_usuario"]),
-                                       Usuario = dr["usuario"].ToString(),
-                                       Password = dr["password"].ToString(),
-                                       Nombre = dr["nombre"].ToString()
-
-                                   }).ToList();
-            foreach ( User user in UserList)
-            {
-                ListViewItem item = new ListViewItem();
-                item = listView1.Items.Add(user.Id_usuario.ToString());
-                item.SubItems.Add(user.Nombre);
-                item.SubItems.Add(user.Usuario);
-                item.SubItems.Add(DateTime.Now.ToString());
-                item.SubItems.Add("10:00 pm");
-            }
+           
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)

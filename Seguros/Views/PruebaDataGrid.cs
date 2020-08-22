@@ -24,7 +24,7 @@ namespace Seguros.Views
 
         private void PruebaDataGrid_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = UserController.GetUserHistorial();
+            
         }
     }
 }
