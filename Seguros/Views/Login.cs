@@ -1,9 +1,10 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
-using Spire.PdfViewer;
+using PdfiumViewer;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Seguros
 {
@@ -11,6 +12,7 @@ namespace Seguros
 
     {
         Thread th;
+
         public login()
         {
             InitializeComponent();
@@ -53,12 +55,33 @@ namespace Seguros
 
             if (fd.ShowDialog() == DialogResult.OK)
             {
-                pdfDocumentViewer1.LoadFromFile(fd.FileName);
+                openfile(fd.FileName);
             }
             else
             {
                 MessageBox.Show("seleccionar archivo");
             }
+        }
+
+
+        private void openfile(string filepath)
+        {
+
+            byte[] bytes = System.IO.File.ReadAllBytes(filepath);
+            var stream = new MemoryStream(bytes);
+            PdfDocument pdfDocument = PdfDocument.Load(stream);
+            pdfViewer1.Document = pdfDocument;
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

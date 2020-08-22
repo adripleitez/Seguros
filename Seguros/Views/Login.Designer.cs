@@ -30,8 +30,7 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnSeleccionar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.pdfDocumentViewer1 = new Spire.PdfViewer.Forms.PdfDocumentViewer();
-            this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
+            this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -47,11 +46,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btnSeleccionar);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.pdfViewer1);
-            this.splitContainer1.Panel2.Controls.Add(this.pdfDocumentViewer1);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(802, 610);
             this.splitContainer1.SplitterDistance = 116;
             this.splitContainer1.TabIndex = 0;
@@ -73,40 +73,14 @@
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // pdfDocumentViewer1
-            // 
-            this.pdfDocumentViewer1.AutoScroll = true;
-            this.pdfDocumentViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.pdfDocumentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfDocumentViewer1.FormFillEnabled = false;
-            this.pdfDocumentViewer1.Location = new System.Drawing.Point(0, 0);
-            this.pdfDocumentViewer1.MultiPagesThreshold = 60;
-            this.pdfDocumentViewer1.Name = "pdfDocumentViewer1";
-            this.pdfDocumentViewer1.OnRenderPageExceptionEvent = null;
-            this.pdfDocumentViewer1.PageLayoutMode = Spire.PdfViewer.Forms.PageLayoutMode.SinglePageContinuous;
-            this.pdfDocumentViewer1.Size = new System.Drawing.Size(802, 490);
-            this.pdfDocumentViewer1.TabIndex = 2;
-            this.pdfDocumentViewer1.Text = "pdfDocumentViewer1";
-            this.pdfDocumentViewer1.Threshold = 60;
-            this.pdfDocumentViewer1.ViewerMode = Spire.PdfViewer.Forms.PdfViewerMode.PdfViewerMode.MultiPage;
-            this.pdfDocumentViewer1.ZoomFactor = 1F;
-            this.pdfDocumentViewer1.ZoomMode = Spire.PdfViewer.Forms.ZoomMode.Default;
-            // 
             // pdfViewer1
             // 
-            this.pdfViewer1.FindTextHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(153)))), ((int)(((byte)(193)))), ((int)(((byte)(218)))));
-            this.pdfViewer1.FormFillEnabled = false;
-            this.pdfViewer1.IgnoreCase = false;
-            this.pdfViewer1.IsToolBarVisible = true;
-            this.pdfViewer1.Location = new System.Drawing.Point(0, -2);
-            this.pdfViewer1.MultiPagesThreshold = 60;
+            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 0);
+            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.OnRenderPageExceptionEvent = null;
-            this.pdfViewer1.Size = new System.Drawing.Size(802, 47);
-            this.pdfViewer1.TabIndex = 3;
-            this.pdfViewer1.Text = "pdfViewer1";
-            this.pdfViewer1.Threshold = 60;
-            this.pdfViewer1.ViewerBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.pdfViewer1.Size = new System.Drawing.Size(802, 490);
+            this.pdfViewer1.TabIndex = 0;
             // 
             // login
             // 
@@ -131,8 +105,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private MaterialSkin.Controls.MaterialFlatButton btnSeleccionar;
-        private Spire.PdfViewer.Forms.PdfDocumentViewer pdfDocumentViewer1;
-        private Spire.PdfViewer.Forms.PdfViewer pdfViewer1;
+        private PdfiumViewer.PdfViewer pdfViewer1;
     }
 }
 
