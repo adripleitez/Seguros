@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.scheduleControl1 = new Syncfusion.Windows.Forms.Schedule.ScheduleControl();
+            this.scheduleControl2 = new Syncfusion.Windows.Forms.Schedule.ScheduleControl();
             this.SuspendLayout();
             // 
-            // scheduleControl1
+            // scheduleControl2
             // 
-            this.scheduleControl1.Appearance.WeekHeaderFormat = "MMMM dd";
-            this.scheduleControl1.Appearance.WeekMonthFullFormat = "dddd, dd MMMM yyyy";
-            this.scheduleControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(201)))), ((int)(((byte)(219)))));
-            this.scheduleControl1.Culture = new System.Globalization.CultureInfo("");
-            this.scheduleControl1.DataSource = null;
-            this.scheduleControl1.ISO8601CalenderFormat = false;
-            this.scheduleControl1.Location = new System.Drawing.Point(0, 0);
-            this.scheduleControl1.Name = "scheduleControl1";
-            this.scheduleControl1.Size = new System.Drawing.Size(995, 731);
-            this.scheduleControl1.TabIndex = 1;
+            this.scheduleControl2.Appearance.WeekHeaderFormat = "MMMM dd";
+            this.scheduleControl2.Appearance.WeekMonthFullFormat = "dddd, dd MMMM yyyy";
+            this.scheduleControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(201)))), ((int)(((byte)(219)))));
+            this.scheduleControl2.Culture = new System.Globalization.CultureInfo("");
+            this.scheduleControl2.DataSource = null;
+            this.scheduleControl2.ISO8601CalenderFormat = false;
+            this.scheduleControl2.Location = new System.Drawing.Point(82, 12);
+            this.scheduleControl2.Name = "scheduleControl2";
+            this.scheduleControl2.Size = new System.Drawing.Size(737, 499);
+            this.scheduleControl2.TabIndex = 0;
             // 
             // calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 923);
-            this.Controls.Add(this.scheduleControl1);
+            this.Controls.Add(this.scheduleControl2);
             this.Name = "calendar";
             this.Text = "calendar";
             this.Load += new System.EventHandler(this.calendar_Load);
@@ -59,6 +59,6 @@
 
         #endregion
 
-        private Syncfusion.Windows.Forms.Schedule.ScheduleControl scheduleControl1;
+        private Syncfusion.Windows.Forms.Schedule.ScheduleControl scheduleControl2;
     }
 }
